@@ -28,17 +28,17 @@ skills["Arc"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 0.8), 
-		skill("damageEffectiveness", 0.7), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.8),
+		skill("damageEffectiveness", 0.9),
+		skill("CritChance", 5),
 		mod("EnemyShockChance", "BASE", 10), --"base_chance_to_shock_%" = 10
 	},
 	qualityMods = {
 		mod("EnemyShockChance", "BASE", 0.5), --"base_chance_to_shock_%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[4] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 		[5] = mod("ChainCountMax", "BASE", nil), --"number_of_additional_projectiles_in_chain"
@@ -63,7 +63,7 @@ skills["Arc"] = {
 		[17] = { 64, 24, 35, 671, 6, },
 		[18] = { 66, 25, 39, 736, 6, },
 		[19] = { 68, 25, 43, 808, 6, },
-		[20] = { 70, 26, 47, 886, 7, },
+		[20] = { 70, 26, 152, 862, 7, },
 		[21] = { 72, 26, 51, 971, 7, },
 		[22] = { 74, 26, 56, 1064, 7, },
 		[23] = { 76, 27, 61, 1164, 7, },
@@ -99,9 +99,9 @@ skills["VaalArcChain"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 0.8), 
-		skill("damageEffectiveness", 0.8), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.8),
+		skill("damageEffectiveness", 0.8),
+		skill("CritChance", 5),
 		mod("EnemyShockChance", "BASE", 100), --"base_chance_to_shock_%" = 100
 		mod("ChainCountMax", "BASE", 40), --"number_of_additional_projectiles_in_chain" = 40
 	},
@@ -109,7 +109,7 @@ skills["VaalArcChain"] = {
 		mod("EnemyShockDuration", "INC", 1.5), --"shock_duration_+%" = 1.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[3] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 	},
@@ -172,17 +172,17 @@ skills["ArcticBreath"] = {
 		cold = true,
 	},
 	baseMods = {
-		skill("castTime", 0.8), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.8),
+		skill("CritChance", 5),
 		--"base_is_projectile" = 1
-		skill("radius", 12), 
+		skill("radius", 12),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
 		[4] = skill("ColdMax", nil), --"spell_maximum_base_cold_damage"
 		[5] = skill("duration", nil), --"base_skill_effect_duration"
@@ -244,18 +244,18 @@ skills["AssassinsMark"] = {
 		duration = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
+		skill("castTime", 0.5),
 		mod("SelfCritMultiplier", "INC", 20, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"base_self_critical_strike_multiplier_-%" = -20
 		--"base_deal_no_damage" = ?
-		skill("debuff", true), 
-		skill("radius", 22), 
+		skill("debuff", true),
+		skill("radius", 22),
 	},
 	qualityMods = {
 		--"chance_to_grant_power_charge_on_death_%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("duration", nil), --"base_skill_effect_duration"
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 		[5] = mod("SelfExtraCritChance", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"additional_chance_to_take_critical_strike_%"
@@ -319,19 +319,19 @@ skills["BallLightning"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 0.8), 
-		skill("damageEffectiveness", 0.2), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.8),
+		skill("damageEffectiveness", 0.2),
+		skill("CritChance", 5),
 		--"active_skill_index" = 0
 		--"base_is_projectile" = ?
-		skill("radius", 20), 
+		skill("radius", 20),
 	},
 	qualityMods = {
 		mod("LightningDamage", "INC", 1), --"lightning_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[4] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 	},
@@ -393,22 +393,22 @@ skills["Blight"] = {
 		chaos = true,
 	},
 	baseMods = {
-		skill("castTime", 0.3), 
+		skill("castTime", 0.3),
 		skill("duration", 2.5), --"base_skill_effect_duration" = 2500
 		--"base_secondary_skill_effect_duration" = 800
 		mod("MovementSpeed", "INC", -80, 0, 0, nil), --"base_movement_velocity_+%" = -80
 		--"display_max_blight_stacks" = 20
 		skill("dotIsSpell", true), --"spell_damage_modifiers_apply_to_damage_over_time" = ?
 		--"is_area_damage" = ?
-		skill("debuff", true), 
-		skill("radius", 26), 
+		skill("debuff", true),
+		skill("radius", 26),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("ChaosDot", nil), --"base_chaos_damage_to_deal_per_minute"
 		[4] = skill("radiusExtra", nil), --"active_skill_base_radius_+"
 	},
@@ -466,19 +466,19 @@ skills["BoneOffering"] = {
 		duration = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
+		skill("castTime", 1),
 		skill("duration", 3), --"base_skill_effect_duration" = 3000
 		--"offering_skill_effect_duration_per_corpse" = 500
 		--"base_deal_no_damage" = ?
-		skill("buffMinions", true), 
-		skill("buffNotPlayer", true), 
+		skill("buffMinions", true),
+		skill("buffNotPlayer", true),
 	},
 	qualityMods = {
 		mod("Duration", "INC", 0.5), --"skill_effect_duration_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = mod("BlockChance", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }), --"monster_base_block_%"
 		[4] = mod("SpellBlockChance", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }), --"base_spell_block_%"
 		--[5] = "minion_recover_X_life_on_block"
@@ -538,17 +538,17 @@ skills["Clarity"] = {
 		area = true,
 	},
 	baseMods = {
-		skill("castTime", 1.2), 
-		skill("cooldown", 1.2), 
+		skill("castTime", 1.2),
+		skill("cooldown", 1.2),
 		--"base_deal_no_damage" = ?
-		skill("radius", 36), 
+		skill("radius", 36),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 1), --"base_skill_area_of_effect_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = mod("ManaRegen", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Aura" }), --"base_mana_regeneration_rate_per_minute"
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 	},
@@ -611,16 +611,16 @@ skills["VaalClarity"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 0.6), 
+		skill("castTime", 0.6),
 		mod("ManaCost", "MORE", -100, 0, 0, { type = "GlobalEffect", effectType = "Aura" }), --"no_mana_cost" = ?
 		--"base_deal_no_damage" = ?
-		skill("radius", 36), 
+		skill("radius", 36),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 1), --"base_skill_area_of_effect_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 		[3] = skill("duration", nil), --"base_skill_effect_duration"
 	},
@@ -679,23 +679,23 @@ skills["ColdSnap"] = {
 		cold = true,
 	},
 	baseMods = {
-		skill("castTime", 0.85), 
-		skill("damageEffectiveness", 1.2), 
-		skill("CritChance", 5), 
-		skill("cooldown", 4), 
+		skill("castTime", 0.85),
+		skill("damageEffectiveness", 1.2),
+		skill("CritChance", 5),
+		skill("cooldown", 4),
 		mod("EnemyFreezeChance", "BASE", 30), --"base_chance_to_freeze_%" = 30
 		mod("EnemyFreezeDuration", "INC", 30), --"freeze_duration_+%" = 30
 		mod("EnemyChillDuration", "INC", 110), --"chill_duration_+%" = 110
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
 		--"is_area_damage" = ?
-		skill("radius", 16), 
+		skill("radius", 16),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
 		[4] = skill("ColdMax", nil), --"spell_maximum_base_cold_damage"
 		[5] = skill("radiusExtra", nil), --"active_skill_base_radius_+"
@@ -759,9 +759,9 @@ skills["VaalColdSnap"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 0.85), 
-		skill("damageEffectiveness", 1.4), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.85),
+		skill("damageEffectiveness", 1.4),
+		skill("CritChance", 5),
 		skill("duration", 10), --"base_skill_effect_duration" = 10000
 		mod("EnemyFreezeChance", "BASE", 100), --"base_chance_to_freeze_%" = 100
 		--"is_area_damage" = ?
@@ -770,7 +770,7 @@ skills["VaalColdSnap"] = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
 		[3] = skill("ColdMax", nil), --"spell_maximum_base_cold_damage"
 	},
@@ -833,17 +833,17 @@ skills["Conductivity"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
+		skill("castTime", 0.5),
 		--"base_deal_no_damage" = ?
-		skill("debuff", true), 
-		skill("radius", 22), 
+		skill("debuff", true),
+		skill("radius", 22),
 	},
 	qualityMods = {
 		mod("SelfShockDuration", "INC", 1, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"base_self_shock_duration_-%" = -1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("duration", nil), --"base_skill_effect_duration"
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 		[5] = mod("LightningResist", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"base_lightning_damage_resistance_%"
@@ -906,19 +906,19 @@ skills["Contagion"] = {
 		chaos = true,
 	},
 	baseMods = {
-		skill("castTime", 0.85), 
+		skill("castTime", 0.85),
 		skill("duration", 5), --"base_skill_effect_duration" = 5000
 		--"is_area_damage" = ?
 		skill("dotIsSpell", true), --"spell_damage_modifiers_apply_to_damage_over_time" = ?
-		skill("debuff", true), 
-		skill("radius", 20), 
+		skill("debuff", true),
+		skill("radius", 20),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("ChaosDot", nil), --"base_chaos_damage_to_deal_per_minute"
 	},
 	levels = {
@@ -976,8 +976,8 @@ skills["ConversionTrap"] = {
 		trap = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
-		skill("cooldown", 8), 
+		skill("castTime", 1),
+		skill("cooldown", 8),
 		--"is_trap" = 1
 		--"base_trap_duration" = 16000
 		--"base_skill_is_trapped" = ?
@@ -987,8 +987,8 @@ skills["ConversionTrap"] = {
 		mod("Duration", "INC", 1), --"skill_effect_duration_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("duration", nil), --"base_skill_effect_duration"
 	},
 	levels = {
@@ -1045,20 +1045,20 @@ skills["Convocation"] = {
 		duration = true,
 	},
 	baseMods = {
-		skill("castTime", 0.8), 
-		skill("cooldown", 8), 
+		skill("castTime", 0.8),
+		skill("cooldown", 8),
 		skill("duration", 2), --"base_skill_effect_duration" = 2000
 		--"base_deal_no_damage" = ?
-		skill("buffMinions", true), 
-		skill("buffNotPlayer", true), 
+		skill("buffMinions", true),
+		skill("buffNotPlayer", true),
 	},
 	qualityMods = {
 		mod("Duration", "INC", 1), --"skill_effect_duration_+%" = 1
 		mod("Speed", "INC", 0.5, ModFlag.Cast), --"base_cast_speed_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = mod("LifeRegen", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }), --"base_life_regeneration_rate_per_minute"
 	},
 	levels = {
@@ -1120,21 +1120,21 @@ skills["Discharge"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
-		skill("damageEffectiveness", 1.5), 
-		skill("CritChance", 7), 
+		skill("castTime", 1),
+		skill("damageEffectiveness", 1.5),
+		skill("CritChance", 7),
 		--"skill_override_pvp_scaling_time_ms" = 1400
 		mod("Damage", "MORE", -35, ModFlag.Spell, 0, { type = "Condition", var = "SkillIsTriggered" }), --"triggered_discharge_damage_+%_final" = -35
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
 		--"is_area_damage" = ?
-		skill("radius", 30), 
+		skill("radius", 30),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("LightningMin", nil, { type = "Multiplier", var = "PowerCharge" }), --"spell_minimum_base_lightning_damage_per_power_charge"
 		[4] = skill("LightningMax", nil, { type = "Multiplier", var = "PowerCharge" }), --"spell_maximum_base_lightning_damage_per_power_charge"
 		[5] = skill("FireMin", nil, { type = "Multiplier", var = "EnduranceCharge" }), --"spell_minimum_base_fire_damage_per_endurance_charge"
@@ -1197,17 +1197,17 @@ skills["Discipline"] = {
 		area = true,
 	},
 	baseMods = {
-		skill("castTime", 1.2), 
-		skill("manaCost", 35), 
-		skill("cooldown", 1.2), 
+		skill("castTime", 1.2),
+		skill("manaCost", 35),
+		skill("cooldown", 1.2),
 		--"base_deal_no_damage" = ?
-		skill("radius", 36), 
+		skill("radius", 36),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 1), --"base_skill_area_of_effect_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = mod("EnergyShield", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Aura" }), --"base_maximum_energy_shield"
 		[3] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 	},
@@ -1270,18 +1270,18 @@ skills["VaalDiscipline"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 0.6), 
+		skill("castTime", 0.6),
 		mod("EnergyShield", "BASE", 0, 0, 0, { type = "GlobalEffect", effectType = "Aura" }), --"base_maximum_energy_shield" = 0
 		skill("duration", 3), --"base_skill_effect_duration" = 3000
 		--"energy_shield_recharge_not_delayed_by_damage" = ?
 		--"base_deal_no_damage" = ?
-		skill("radius", 36), 
+		skill("radius", 36),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 1), --"base_skill_area_of_effect_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 	},
 	levels = {
@@ -1341,17 +1341,17 @@ skills["ElementalWeakness"] = {
 		duration = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
+		skill("castTime", 0.5),
 		--"base_deal_no_damage" = ?
-		skill("debuff", true), 
-		skill("radius", 22), 
+		skill("debuff", true),
+		skill("radius", 22),
 	},
 	qualityMods = {
 		mod("ElementalResist", "BASE", -0.25, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"base_resist_all_elements_%" = -0.25
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("duration", nil), --"base_skill_effect_duration"
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 		[5] = mod("ElementalResist", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"base_resist_all_elements_%"
@@ -1413,19 +1413,19 @@ skills["Enfeeble"] = {
 		duration = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
+		skill("castTime", 0.5),
 		mod("CritChance", "INC", -25, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"critical_strike_chance_+%" = -25
 		--"base_deal_no_damage" = ?
-		skill("debuff", true), 
-		skill("radius", 22), 
+		skill("debuff", true),
+		skill("radius", 22),
 	},
 	qualityMods = {
 		mod("Accuracy", "INC", -0.5, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"accuracy_rating_+%" = -0.5
 		mod("CritChance", "INC", -0.5, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"critical_strike_chance_+%" = -0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("duration", nil), --"base_skill_effect_duration"
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 		[5] = mod("Accuracy", "INC", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"accuracy_rating_+%"
@@ -1489,22 +1489,22 @@ skills["EssenceDrain"] = {
 		chaos = true,
 	},
 	baseMods = {
-		skill("castTime", 0.75), 
-		skill("damageEffectiveness", 0.6), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.75),
+		skill("damageEffectiveness", 0.6),
+		skill("CritChance", 5),
 		--"siphon_life_leech_from_damage_permyriad" = 50
 		skill("duration", 3.8), --"base_skill_effect_duration" = 3800
 		skill("dotIsSpell", true), --"spell_damage_modifiers_apply_to_damage_over_time" = ?
 		--"base_is_projectile" = ?
-		skill("debuff", true), 
-		skill("showAverage", true), 
+		skill("debuff", true),
+		skill("showAverage", true),
 	},
 	qualityMods = {
 		mod("ChaosDamage", "INC", 1), --"chaos_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("ChaosDot", nil), --"base_chaos_damage_to_deal_per_minute"
 		[4] = skill("ChaosMin", nil), --"spell_minimum_base_chaos_damage"
 		[5] = skill("ChaosMax", nil), --"spell_maximum_base_chaos_damage"
@@ -1568,23 +1568,23 @@ skills["FireNovaMine"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 0.4), 
-		skill("damageEffectiveness", 0.3), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.4),
+		skill("damageEffectiveness", 0.3),
+		skill("CritChance", 5),
 		--"base_mine_duration" = 16000
 		skill("repeatCount", 3), --"base_spell_repeat_count" = 3
 		--"base_skill_is_mined" = ?
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
 		--"is_remote_mine" = ?
 		--"is_area_damage" = ?
-		skill("radius", 30), 
+		skill("radius", 30),
 	},
 	qualityMods = {
 		mod("FireDamage", "INC", 1), --"fire_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("FireMin", nil), --"spell_minimum_base_fire_damage"
 		[4] = skill("FireMax", nil), --"spell_maximum_base_fire_damage"
 		--[5] = "fire_nova_damage_+%_per_repeat_final"
@@ -1655,17 +1655,17 @@ skills["Fireball"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 0.85), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.85),
+		skill("CritChance", 6),
 		--"base_is_projectile" = ?
-		skill("radius", 9), 
+		skill("radius", 9),
 	},
 	qualityMods = {
 		mod("EnemyIgniteChance", "BASE", 0.5), --"base_chance_to_ignite_%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("FireMin", nil), --"spell_minimum_base_fire_damage"
 		[4] = skill("FireMax", nil), --"spell_maximum_base_fire_damage"
 		[5] = mod("EnemyIgniteChance", "BASE", nil), --"base_chance_to_ignite_%"
@@ -1739,9 +1739,9 @@ skills["VaalFireballSpiralNova"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 0.85), 
-		skill("damageEffectiveness", 1.25), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.85),
+		skill("damageEffectiveness", 1.25),
+		skill("CritChance", 6),
 		--"base_number_of_projectiles_in_spiral_nova" = 32
 		--"projectile_spiral_nova_time_ms" = 2000
 		--"projectile_spiral_nova_angle" = -720
@@ -1752,7 +1752,7 @@ skills["VaalFireballSpiralNova"] = {
 		mod("EnemyIgniteChance", "BASE", 1.5), --"base_chance_to_ignite_%" = 1.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = skill("FireMin", nil), --"spell_minimum_base_fire_damage"
 		[3] = skill("FireMax", nil), --"spell_maximum_base_fire_damage"
 	},
@@ -1813,23 +1813,23 @@ skills["Firestorm"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 0.9), 
-		skill("damageEffectiveness", 0.3), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.9),
+		skill("damageEffectiveness", 0.3),
+		skill("CritChance", 6),
 		skill("duration", 2), --"base_skill_effect_duration" = 2000
 		--"fire_storm_fireball_delay_ms" = 100
 		--"is_area_damage" = 1
 		--"skill_override_pvp_scaling_time_ms" = 450
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
-		skill("radius", 25), 
-		skill("radiusSecondary", 10), 
+		skill("radius", 25),
+		skill("radiusSecondary", 10),
 	},
 	qualityMods = {
 		mod("Damage", "INC", 1, 0, 0, nil), --"damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("FireMin", nil), --"spell_minimum_base_fire_damage"
 		[4] = skill("FireMax", nil), --"spell_maximum_base_fire_damage"
 	},
@@ -1891,9 +1891,9 @@ skills["FlameDash"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 0.75), 
-		skill("CritChance", 6), 
-		skill("cooldown", 3), 
+		skill("castTime", 0.75),
+		skill("CritChance", 6),
+		skill("cooldown", 3),
 		skill("duration", 4), --"base_skill_effect_duration" = 4000
 		--"is_area_damage" = ?
 		--"firestorm_use_server_effects" = ?
@@ -1902,8 +1902,8 @@ skills["FlameDash"] = {
 		mod("Speed", "INC", 0.5, ModFlag.Cast), --"base_cast_speed_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("FireMin", nil), --"spell_minimum_base_fire_damage"
 		[4] = skill("FireMax", nil), --"spell_maximum_base_fire_damage"
 		[5] = skill("FireDot", nil), --"base_fire_damage_to_deal_per_minute"
@@ -1963,19 +1963,19 @@ skills["FlameWhip"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.5),
+		skill("CritChance", 6),
 		mod("Damage", "MORE", 50, bit.bor(ModFlag.Spell, ModFlag.Hit), 0, { type = "ActorCondition", actor = "enemy", var = "Burning" }), --"flame_whip_damage_+%_final_vs_burning_enemies" = 50
 		flag("CannotIgnite"), --"never_ignite" = ?
 		--"is_area_damage" = ?
-		skill("radius", 30), 
+		skill("radius", 30),
 	},
 	qualityMods = {
 		mod("Speed", "INC", 0.5, ModFlag.Cast), --"base_cast_speed_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("FireMin", nil), --"spell_minimum_base_fire_damage"
 		[4] = skill("FireMax", nil), --"spell_maximum_base_fire_damage"
 	},
@@ -2043,21 +2043,21 @@ skills["Flameblast"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 0.2), 
-		skill("damageEffectiveness", 0.5), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.2),
+		skill("damageEffectiveness", 0.5),
+		skill("CritChance", 5),
 		--"charged_blast_spell_damage_+%_final_per_stack" = 110
 		--"is_area_damage" = ?
 		nil, --"base_skill_show_average_damage_instead_of_dps" = ?
-		mod("Damage", "MORE", 990, 0, 0, { type = "SkillPart", skillPart = 2 }), 
-		skill("dpsMultiplier", 0.1, { type = "SkillPart", skillPart = 2 }), 
+		mod("Damage", "MORE", 990, 0, 0, { type = "SkillPart", skillPart = 2 }),
+		skill("dpsMultiplier", 0.1, { type = "SkillPart", skillPart = 2 }),
 	},
 	qualityMods = {
 		mod("Damage", "INC", 1, 0, 0, nil), --"damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("FireMin", nil), --"spell_minimum_base_fire_damage"
 		[4] = skill("FireMax", nil), --"spell_maximum_base_fire_damage"
 	},
@@ -2118,19 +2118,19 @@ skills["VaalFlameblast"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
-		skill("damageEffectiveness", 0.6), 
-		skill("CritChance", 5), 
+		skill("castTime", 1),
+		skill("damageEffectiveness", 0.6),
+		skill("CritChance", 5),
 		--"charged_blast_spell_damage_+%_final_per_stack" = 110
 		--"is_area_damage" = ?
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
-		mod("Damage", "MORE", 1100, ModFlag.Spell), 
+		mod("Damage", "MORE", 1100, ModFlag.Spell),
 	},
 	qualityMods = {
 		mod("Damage", "INC", 1, 0, 0, nil), --"damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = skill("FireMin", nil), --"spell_minimum_base_fire_damage"
 		[3] = skill("FireMax", nil), --"spell_maximum_base_fire_damage"
 	},
@@ -2193,17 +2193,17 @@ skills["Flammability"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
+		skill("castTime", 0.5),
 		--"base_deal_no_damage" = ?
-		skill("debuff", true), 
-		skill("radius", 22), 
+		skill("debuff", true),
+		skill("radius", 22),
 	},
 	qualityMods = {
 		mod("SelfIgniteDuration", "INC", 0.5, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"base_self_ignite_duration_-%" = -0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("duration", nil), --"base_skill_effect_duration"
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 		[5] = mod("FireResist", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"base_fire_damage_resistance_%"
@@ -2263,19 +2263,19 @@ skills["FleshOffering"] = {
 		duration = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
+		skill("castTime", 1),
 		skill("duration", 3), --"base_skill_effect_duration" = 3000
 		--"offering_skill_effect_duration_per_corpse" = 500
 		--"base_deal_no_damage" = ?
-		skill("buffMinions", true), 
-		skill("buffNotPlayer", true), 
+		skill("buffMinions", true),
+		skill("buffNotPlayer", true),
 	},
 	qualityMods = {
 		mod("Duration", "INC", 0.5), --"skill_effect_duration_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = mod("Speed", "INC", nil, ModFlag.Attack, 0, { type = "GlobalEffect", effectType = "Buff" }), --"attack_speed_+%"
 		[4] = mod("MovementSpeed", "INC", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }), --"base_movement_velocity_+%"
 		[5] = mod("Speed", "INC", nil, ModFlag.Cast, 0, { type = "GlobalEffect", effectType = "Buff" }), --"cast_speed_+%_from_haste_aura"
@@ -2339,9 +2339,9 @@ skills["FreezingPulse"] = {
 		cold = true,
 	},
 	baseMods = {
-		skill("castTime", 0.65), 
-		skill("damageEffectiveness", 1.25), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.65),
+		skill("damageEffectiveness", 1.25),
+		skill("CritChance", 6),
 		--"base_is_projectile" = ?
 		mod("PierceChance", "BASE", 100), --"always_pierce" = ?
 	},
@@ -2349,8 +2349,8 @@ skills["FreezingPulse"] = {
 		mod("ProjectileSpeed", "INC", 2), --"base_projectile_speed_+%" = 2
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
 		[4] = skill("ColdMax", nil), --"spell_maximum_base_cold_damage"
 		[5] = mod("ProjectileSpeed", "INC", nil), --"base_projectile_speed_+%"
@@ -2412,10 +2412,10 @@ skills["FrostBomb"] = {
 		cold = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
-		skill("damageEffectiveness", 1.3), 
-		skill("CritChance", 6), 
-		skill("cooldown", 2.5), 
+		skill("castTime", 0.5),
+		skill("damageEffectiveness", 1.3),
+		skill("CritChance", 6),
+		skill("cooldown", 2.5),
 		skill("duration", 3.5), --"base_skill_effect_duration" = 3500
 		--"base_secondary_skill_effect_duration" = 2000
 		mod("ColdResist", "BASE", -20, 0, 0, { type = "GlobalEffect", effectType = "Debuff" }), --"base_cold_damage_resistance_%" = -20
@@ -2427,8 +2427,8 @@ skills["FrostBomb"] = {
 		mod("ColdDamage", "INC", 1), --"cold_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
 		[4] = skill("ColdMax", nil), --"spell_maximum_base_cold_damage"
 	},
@@ -2487,8 +2487,8 @@ skills["FrostWall"] = {
 		cold = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
-		skill("cooldown", 3), 
+		skill("castTime", 0.5),
+		skill("cooldown", 3),
 		--"wall_expand_delay_ms" = 150
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
 	},
@@ -2496,8 +2496,8 @@ skills["FrostWall"] = {
 		mod("Duration", "INC", 1), --"skill_effect_duration_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("duration", nil), --"base_skill_effect_duration"
 		--[4] = "wall_maximum_length"
 		[5] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
@@ -2562,17 +2562,17 @@ skills["Frostbite"] = {
 		cold = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
+		skill("castTime", 0.5),
 		--"base_deal_no_damage" = ?
-		skill("debuff", true), 
-		skill("radius", 22), 
+		skill("debuff", true),
+		skill("radius", 22),
 	},
 	qualityMods = {
 		mod("SelfFreezeDuration", "INC", 1, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"base_self_freeze_duration_-%" = -1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("duration", nil), --"base_skill_effect_duration"
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 		[5] = mod("ColdResist", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"base_cold_damage_resistance_%"
@@ -2633,8 +2633,8 @@ skills["FrostBolt"] = {
 		cold = true,
 	},
 	baseMods = {
-		skill("castTime", 0.75), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.75),
+		skill("CritChance", 5),
 		--"base_is_projectile" = ?
 		mod("PierceChance", "BASE", 100), --"always_pierce" = ?
 	},
@@ -2642,8 +2642,8 @@ skills["FrostBolt"] = {
 		mod("ColdDamage", "INC", 1), --"cold_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
 		[4] = skill("ColdMax", nil), --"spell_maximum_base_cold_damage"
 	},
@@ -2702,19 +2702,19 @@ skills["GlacialCascade"] = {
 		cold = true,
 	},
 	baseMods = {
-		skill("castTime", 0.8), 
-		skill("damageEffectiveness", 0.6), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.8),
+		skill("damageEffectiveness", 0.6),
+		skill("CritChance", 5),
 		--"upheaval_number_of_spikes" = 7
 		--"is_area_damage" = ?
-		skill("radius", 14), 
+		skill("radius", 14),
 	},
 	qualityMods = {
 		mod("Damage", "INC", 1, 0, 0, nil), --"damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("PhysicalMin", nil), --"spell_minimum_base_physical_damage"
 		[4] = skill("PhysicalMax", nil), --"spell_maximum_base_physical_damage"
 		[5] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
@@ -2776,22 +2776,22 @@ skills["HeraldOfThunder"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
-		skill("manaCost", 25), 
-		skill("damageEffectiveness", 1.2), 
-		skill("cooldown", 1), 
+		skill("castTime", 1),
+		skill("manaCost", 25),
+		skill("damageEffectiveness", 1.2),
+		skill("cooldown", 1),
 		skill("duration", 6), --"base_skill_effect_duration" = 6000
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
 		flag("CannotShock"), --"never_shock" = ?
 		--"display_skill_deals_secondary_damage" = ?
 		--"skill_can_add_multiple_charges_per_action" = ?
-		skill("radius", 32), 
+		skill("radius", 32),
 	},
 	qualityMods = {
 		mod("LightningDamage", "INC", 0.75, 0, 0, { type = "GlobalEffect", effectType = "Buff" }), --"herald_of_thunder_lightning_damage_+%" = 0.75
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = mod("LightningMin", "BASE", nil, ModFlag.Spell, 0, { type = "GlobalEffect", effectType = "Buff" }), --"spell_minimum_added_lightning_damage"
 		[3] = mod("LightningMax", "BASE", nil, ModFlag.Spell, 0, { type = "GlobalEffect", effectType = "Buff" }), --"spell_maximum_added_lightning_damage"
 		[4] = mod("LightningMin", "BASE", nil, ModFlag.Attack, 0, { type = "GlobalEffect", effectType = "Buff" }), --"attack_minimum_added_lightning_damage"
@@ -2854,19 +2854,19 @@ skills["IceNova"] = {
 		cold = true,
 	},
 	baseMods = {
-		skill("castTime", 0.8), 
-		skill("damageEffectiveness", 0.7), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.8),
+		skill("damageEffectiveness", 0.7),
+		skill("CritChance", 6),
 		--"skill_art_variation" = 0
 		--"is_area_damage" = 1
-		skill("radius", 30), 
+		skill("radius", 30),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
 		[4] = skill("ColdMax", nil), --"spell_maximum_base_cold_damage"
 	},
@@ -2927,9 +2927,9 @@ skills["VaalIceNova"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 0.8), 
-		skill("damageEffectiveness", 0.7), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.8),
+		skill("damageEffectiveness", 0.7),
+		skill("CritChance", 6),
 		--"ice_nova_number_of_repeats" = 5
 		--"ice_nova_radius_+%_per_repeat" = -20
 		--"is_area_damage" = ?
@@ -2938,7 +2938,7 @@ skills["VaalIceNova"] = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
 		[3] = skill("ColdMax", nil), --"spell_maximum_base_cold_damage"
 	},
@@ -3005,19 +3005,19 @@ skills["IceSpear"] = {
 		cold = true,
 	},
 	baseMods = {
-		skill("castTime", 0.85), 
-		skill("damageEffectiveness", 0.8), 
-		skill("CritChance", 7), 
+		skill("castTime", 0.85),
+		skill("damageEffectiveness", 0.8),
+		skill("CritChance", 7),
 		--"base_is_projectile" = 1
 		mod("CritChance", "INC", 600, 0, 0, { type = "SkillPart", skillPart = 2 }), --"ice_spear_second_form_critical_strike_chance_+%" = 600
-		mod("PierceChance", "BASE", 100, 0, 0, { type = "SkillPart", skillPart = 1 }), 
+		mod("PierceChance", "BASE", 100, 0, 0, { type = "SkillPart", skillPart = 1 }),
 	},
 	qualityMods = {
 		mod("ProjectileSpeed", "INC", 2), --"base_projectile_speed_+%" = 2
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
 		[4] = skill("ColdMax", nil), --"spell_maximum_base_cold_damage"
 		[5] = mod("EnemyChillDuration", "INC", nil), --"chill_duration_+%"
@@ -3086,20 +3086,20 @@ skills["Incinerate"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 0.2), 
-		skill("damageEffectiveness", 0.3), 
+		skill("castTime", 0.2),
+		skill("damageEffectiveness", 0.3),
 		--"flamethrower_damage_+%_per_stage_final" = 50
 		--"base_is_projectile" = ?
 		mod("PierceChance", "BASE", 100), --"always_pierce" = ?
 		--"skill_can_add_multiple_charges_per_action" = ?
-		mod("Damage", "MORE", 150, ModFlag.Spell, 0, { type = "SkillPart", skillPart = 2 }), 
+		mod("Damage", "MORE", 150, ModFlag.Spell, 0, { type = "SkillPart", skillPart = 2 }),
 	},
 	qualityMods = {
 		mod("ProjectileSpeed", "INC", 2), --"base_projectile_speed_+%" = 2
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("FireMin", nil), --"spell_minimum_base_fire_damage"
 		[4] = skill("FireMax", nil), --"spell_maximum_base_fire_damage"
 	},
@@ -3171,20 +3171,20 @@ skills["ClusterBurst"] = {
 		area = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
+		skill("castTime", 1),
 		--"cluster_burst_spawn_amount" = 4
 		mod("Damage", "MORE", -25, ModFlag.Area), --"active_skill_area_damage_+%_final" = -25
 		--"base_is_projectile" = ?
 		--"skill_can_fire_wand_projectiles" = ?
-		skill("radius", 14), 
+		skill("radius", 14),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
-		[3] = mod("Damage", "MORE", nil, ModFlag.Attack), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
+		[3] = mod("Damage", "MORE", nil, ModFlag.Attack),
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 	},
 	levels = {
@@ -3242,20 +3242,20 @@ skills["LightningTendrils"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 0.8), 
-		skill("damageEffectiveness", 0.35), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.8),
+		skill("damageEffectiveness", 0.35),
+		skill("CritChance", 6),
 		--"base_skill_number_of_additional_hits" = 3
 		--"is_area_damage" = ?
-		skill("dpsMultiplier", 4), 
-		skill("radius", 22), 
+		skill("dpsMultiplier", 4),
+		skill("radius", 22),
 	},
 	qualityMods = {
 		mod("LightningDamage", "INC", 1), --"lightning_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[4] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 		[5] = skill("radiusExtra", nil), --"active_skill_base_radius_+"
@@ -3318,10 +3318,10 @@ skills["LightningTrap"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
-		skill("damageEffectiveness", 0.9), 
-		skill("CritChance", 5), 
-		skill("cooldown", 2), 
+		skill("castTime", 1),
+		skill("damageEffectiveness", 0.9),
+		skill("CritChance", 5),
+		skill("cooldown", 2),
 		--"base_trap_duration" = 16000
 		mod("ProjectileCount", "BASE", 8), --"number_of_additional_projectiles" = 8
 		--"projectiles_nova" = ?
@@ -3334,8 +3334,8 @@ skills["LightningTrap"] = {
 		mod("TrapThrowingSpeed", "INC", 0.5), --"trap_throwing_speed_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[4] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 	},
@@ -3400,9 +3400,9 @@ skills["VaalLightningTrap"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
-		skill("damageEffectiveness", 0.9), 
-		skill("CritChance", 5), 
+		skill("castTime", 1),
+		skill("damageEffectiveness", 0.9),
+		skill("CritChance", 5),
 		--"base_trap_duration" = 16000
 		mod("ProjectileCount", "BASE", 8), --"number_of_additional_projectiles" = 8
 		skill("duration", 4), --"base_skill_effect_duration" = 4000
@@ -3418,7 +3418,7 @@ skills["VaalLightningTrap"] = {
 		mod("TrapThrowingSpeed", "INC", 0.5), --"trap_throwing_speed_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[3] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 	},
@@ -3481,20 +3481,20 @@ skills["LightningWarp"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
-		skill("damageEffectiveness", 0.6), 
-		skill("CritChance", 5), 
+		skill("castTime", 1),
+		skill("damageEffectiveness", 0.6),
+		skill("CritChance", 5),
 		--"is_area_damage" = 1
 		--"skill_override_pvp_scaling_time_ms" = 1000
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
-		skill("radius", 16), 
+		skill("radius", 16),
 	},
 	qualityMods = {
 		mod("Speed", "INC", 1, ModFlag.Cast), --"base_cast_speed_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[4] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 		[5] = mod("Duration", "INC", nil), --"skill_effect_duration_+%"
@@ -3558,9 +3558,9 @@ skills["VaalLightningWarpInstant"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
-		skill("damageEffectiveness", 0.5), 
-		skill("CritChance", 5), 
+		skill("castTime", 1),
+		skill("damageEffectiveness", 0.5),
+		skill("CritChance", 5),
 		--"is_area_damage" = 1
 		--"skill_override_pvp_scaling_time_ms" = 1000
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
@@ -3569,7 +3569,7 @@ skills["VaalLightningWarpInstant"] = {
 		mod("Speed", "INC", 1, ModFlag.Cast), --"base_cast_speed_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[3] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 		[4] = mod("Duration", "INC", nil), --"skill_effect_duration_+%"
@@ -3633,9 +3633,9 @@ skills["MagmaOrb"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 0.7), 
-		skill("damageEffectiveness", 1.25), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.7),
+		skill("damageEffectiveness", 1.25),
+		skill("CritChance", 5),
 		--"is_area_damage" = ?
 		--"base_is_projectile" = ?
 	},
@@ -3643,8 +3643,8 @@ skills["MagmaOrb"] = {
 		mod("Damage", "INC", 1, 0, 0, nil), --"damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("FireMin", nil), --"spell_minimum_base_fire_damage"
 		[4] = skill("FireMax", nil), --"spell_maximum_base_fire_damage"
 		[5] = mod("ChainCountMax", "BASE", nil), --"number_of_additional_projectiles_in_chain"
@@ -3707,10 +3707,10 @@ skills["OrbOfStorms"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
-		skill("damageEffectiveness", 0.2), 
-		skill("CritChance", 5), 
-		skill("cooldown", 0.5), 
+		skill("castTime", 0.5),
+		skill("damageEffectiveness", 0.2),
+		skill("CritChance", 5),
+		skill("cooldown", 0.5),
 		skill("duration", 6), --"base_skill_effect_duration" = 6000
 		mod("ChainCountMax", "BASE", 0), --"number_of_additional_projectiles_in_chain" = 0
 		--"storm_cloud_charged_damage_+%_final" = 0
@@ -3720,8 +3720,8 @@ skills["OrbOfStorms"] = {
 		mod("LightningDamage", "INC", 1), --"lightning_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[4] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 		--[5] = "projectile_number_to_split"
@@ -3782,7 +3782,7 @@ skills["PowerSiphon"] = {
 		projectile = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
+		skill("castTime", 1),
 		--"kill_enemy_on_hit_if_under_10%_life" = ?
 		--"skill_can_fire_wand_projectiles" = ?
 	},
@@ -3790,9 +3790,9 @@ skills["PowerSiphon"] = {
 		mod("Damage", "INC", 1, 0, 0, nil), --"damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
-		[3] = mod("Damage", "MORE", nil, ModFlag.Attack), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
+		[3] = mod("Damage", "MORE", nil, ModFlag.Attack),
 	},
 	levels = {
 		[1] = { 12, 13, 30, },
@@ -3852,7 +3852,7 @@ skills["VaalPowerSiphon"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
+		skill("castTime", 1),
 		--"power_siphon_fire_at_all_targets" = ?
 		--"skill_can_add_multiple_charges_per_action" = ?
 		skill("cannotBeEvaded", true), --"global_always_hit" = ?
@@ -3863,8 +3863,8 @@ skills["VaalPowerSiphon"] = {
 		mod("Damage", "INC", 1, 0, 0, nil), --"damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = mod("Damage", "MORE", nil, ModFlag.Attack), 
+		[1] = skill("levelRequirement", nil),
+		[2] = mod("Damage", "MORE", nil, ModFlag.Attack),
 	},
 	levels = {
 		[1] = { 12, 25, },
@@ -3921,20 +3921,20 @@ skills["Purity"] = {
 		area = true,
 	},
 	baseMods = {
-		skill("castTime", 1.2), 
-		skill("manaCost", 35), 
-		skill("cooldown", 1.2), 
+		skill("castTime", 1.2),
+		skill("manaCost", 35),
+		skill("cooldown", 1.2),
 		mod("FireResistMax", "BASE", 0, 0, 0, { type = "GlobalEffect", effectType = "Aura" }), --"base_maximum_fire_damage_resistance_%" = 0
 		mod("ColdResistMax", "BASE", 0, 0, 0, { type = "GlobalEffect", effectType = "Aura" }), --"base_maximum_cold_damage_resistance_%" = 0
 		mod("LightningResistMax", "BASE", 0, 0, 0, { type = "GlobalEffect", effectType = "Aura" }), --"base_maximum_lightning_damage_resistance_%" = 0
 		--"base_deal_no_damage" = ?
-		skill("radius", 36), 
+		skill("radius", 36),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 1), --"base_skill_area_of_effect_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = mod("ElementalResist", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Aura" }), --"base_resist_all_elements_%"
 		[3] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 	},
@@ -3994,17 +3994,17 @@ skills["LightningResistAura"] = {
 		area = true,
 	},
 	baseMods = {
-		skill("castTime", 1.2), 
-		skill("manaCost", 35), 
-		skill("cooldown", 1.2), 
+		skill("castTime", 1.2),
+		skill("manaCost", 35),
+		skill("cooldown", 1.2),
 		--"base_deal_no_damage" = ?
-		skill("radius", 36), 
+		skill("radius", 36),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 1), --"base_skill_area_of_effect_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = mod("LightningResist", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Aura" }), --"base_lightning_damage_resistance_%"
 		[3] = mod("LightningResistMax", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Aura" }), --"base_maximum_lightning_damage_resistance_%"
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
@@ -4066,7 +4066,7 @@ skills["RaiseSpectre"] = {
 		spectre = true,
 	},
 	baseMods = {
-		skill("castTime", 0.85), 
+		skill("castTime", 0.85),
 		mod("ActiveSpectreLimit", "BASE", 1), --"base_number_of_spectres_allowed" = 1
 		mod("MinionModifier", "LIST", { mod = mod("MovementSpeed", "MORE", 55) }), --"active_skill_minion_movement_velocity_+%_final" = 55
 		--"movement_velocity_cap" = -89
@@ -4077,8 +4077,8 @@ skills["RaiseSpectre"] = {
 		mod("MinionModifier", "LIST", { mod = mod("MovementSpeed", "INC", 1) }), --"minion_movement_speed_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", nil) }), --"active_skill_minion_damage_+%_final"
 		[4] = mod("MinionModifier", "LIST", { mod = mod("Life", "MORE", nil) }), --"active_skill_minion_life_+%_final"
 		[5] = mod("MinionModifier", "LIST", { mod = mod("EnergyShield", "MORE", nil) }), --"active_skill_minion_energy_shield_+%_final"
@@ -4140,7 +4140,7 @@ skills["RaiseZombie"] = {
 		minion = true,
 	},
 	baseMods = {
-		skill("castTime", 0.85), 
+		skill("castTime", 0.85),
 		mod("ActiveZombieLimit", "BASE", 3), --"base_number_of_zombies_allowed" = 3
 		mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", 0) }), --"active_skill_minion_damage_+%_final" = 0
 		--"display_minion_monster_type" = 1
@@ -4150,8 +4150,8 @@ skills["RaiseZombie"] = {
 		mod("MinionModifier", "LIST", { mod = mod("MovementSpeed", "INC", 1) }), --"minion_movement_speed_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("minionLevel", nil), --"display_minion_monster_level"
 	},
 	levels = {
@@ -4216,18 +4216,18 @@ skills["RighteousFire"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
+		skill("castTime", 1),
 		--"base_righteous_fire_%_of_max_life_to_deal_to_nearby_per_minute" = 3000
 		mod("FireDegen", "BASE", 0.9, 0, 0, { type = "PerStat", stat = "Life", div = 1}, { type = "GlobalEffect", effectType = "Buff" }), --"base_nonlethal_fire_damage_%_of_maximum_life_taken_per_minute" = 5400
 		--"base_righteous_fire_%_of_max_energy_shield_to_deal_to_nearby_per_minute" = 3000
 		mod("FireDegen", "BASE", 0.7, 0, 0, { type = "PerStat", stat = "EnergyShield", div = 1}, { type = "GlobalEffect", effectType = "Buff" }), --"base_nonlethal_fire_damage_%_of_maximum_energy_shield_taken_per_minute" = 4200
-		skill("radius", 18), 
+		skill("radius", 18),
 	},
 	qualityMods = {
 		mod("Damage", "INC", 1, ModFlag.Spell, 0, { type = "GlobalEffect", effectType = "Buff" }), --"spell_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = mod("Damage", "MORE", nil, ModFlag.Spell, 0, { type = "GlobalEffect", effectType = "Buff" }), --"righteous_fire_spell_damage_+%_final"
 		[3] = skill("radiusExtra", nil), --"active_skill_base_radius_+"
 	},
@@ -4292,8 +4292,8 @@ skills["VaalRighteousFire"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
-		skill("CritChance", 5), 
+		skill("castTime", 1),
+		skill("CritChance", 5),
 		--"damage_cannot_be_reflected" = ?
 		--"is_area_damage" = ?
 	},
@@ -4301,7 +4301,7 @@ skills["VaalRighteousFire"] = {
 		mod("Damage", "INC", 1, ModFlag.Spell, 0, nil), --"spell_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = mod("Damage", "MORE", nil, ModFlag.Hit), --"active_skill_damage_+%_final"
 	},
 	levels = {
@@ -4371,25 +4371,25 @@ skills["FireBeam"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
+		skill("castTime", 0.5),
 		skill("duration", 1.5), --"base_skill_effect_duration" = 1500
 		--"fire_beam_additional_stack_damage_+%_final" = -40
 		--"display_max_fire_beam_stacks" = 8
 		mod("FireResist", "BASE", -3, 0, 0, { type = "GlobalEffect", effectType = "Debuff" }), --"fire_beam_enemy_fire_resistance_%_per_stack" = -3
 		--"fire_beam_enemy_fire_resistance_%_maximum" = -24
 		skill("dotIsSpell", true), --"spell_damage_modifiers_apply_to_damage_over_time" = ?
-		skill("stackCount", 1, { type = "SkillPart", skillPart = 1 }), 
-		skill("stackCount", 4, { type = "SkillPart", skillPart = 2 }), 
-		skill("stackCount", 8, { type = "SkillPart", skillPart = 3 }), 
-		mod("Damage", "MORE", 180, 0, 0, { type = "SkillPart", skillPart = 2 }), 
-		mod("Damage", "MORE", 420, 0, 0, { type = "SkillPart", skillPart = 3 }), 
+		skill("stackCount", 1, { type = "SkillPart", skillPart = 1 }),
+		skill("stackCount", 4, { type = "SkillPart", skillPart = 2 }),
+		skill("stackCount", 8, { type = "SkillPart", skillPart = 3 }),
+		mod("Damage", "MORE", 180, 0, 0, { type = "SkillPart", skillPart = 2 }),
+		mod("Damage", "MORE", 420, 0, 0, { type = "SkillPart", skillPart = 3 }),
 	},
 	qualityMods = {
 		--"fire_beam_length_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("FireDot", nil), --"base_fire_damage_to_deal_per_minute"
 	},
 	levels = {
@@ -4455,20 +4455,20 @@ skills["ShockNova"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 0.75), 
-		skill("damageEffectiveness", 0.6), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.75),
+		skill("damageEffectiveness", 0.6),
+		skill("CritChance", 6),
 		mod("Damage", "MORE", -80, 0, 0, { type = "SkillPart", skillPart = 1 }), --"newshocknova_first_ring_damage_+%_final" = -80
 		mod("EnemyShockChance", "BASE", 20), --"base_chance_to_shock_%" = 20
 		--"is_area_damage" = ?
-		skill("radius", 26), 
+		skill("radius", 26),
 	},
 	qualityMods = {
 		mod("EnemyShockDuration", "INC", 2), --"shock_duration_+%" = 2
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[4] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 	},
@@ -4529,9 +4529,9 @@ skills["Spark"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 0.65), 
-		skill("damageEffectiveness", 0.7), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.65),
+		skill("damageEffectiveness", 0.7),
+		skill("CritChance", 6),
 		skill("duration", 1.5), --"base_skill_effect_duration" = 1500
 		--"base_is_projectile" = ?
 	},
@@ -4539,8 +4539,8 @@ skills["Spark"] = {
 		mod("ProjectileSpeed", "INC", 1), --"base_projectile_speed_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[4] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 		[5] = mod("ProjectileCount", "BASE", nil), --"number_of_additional_projectiles"
@@ -4604,9 +4604,9 @@ skills["VaalSparkSpiralNova"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 0.65), 
-		skill("damageEffectiveness", 0.4), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.65),
+		skill("damageEffectiveness", 0.4),
+		skill("CritChance", 5),
 		skill("duration", 2), --"base_skill_effect_duration" = 2000
 		--"base_number_of_projectiles_in_spiral_nova" = 100
 		--"projectile_spiral_nova_time_ms" = 3000
@@ -4617,7 +4617,7 @@ skills["VaalSparkSpiralNova"] = {
 		mod("ProjectileSpeed", "INC", 1), --"base_projectile_speed_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[3] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 	},
@@ -4675,20 +4675,20 @@ skills["SpiritOffering"] = {
 		duration = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
+		skill("castTime", 1),
 		skill("duration", 3), --"base_skill_effect_duration" = 3000
 		--"offering_skill_effect_duration_per_corpse" = 500
 		--"spirit_offering_life_%_added_as_base_maximum_energy_shield_per_corpse_consumed" = 2
 		--"base_deal_no_damage" = ?
-		skill("buffMinions", true), 
-		skill("buffNotPlayer", true), 
+		skill("buffMinions", true),
+		skill("buffNotPlayer", true),
 	},
 	qualityMods = {
 		mod("Duration", "INC", 0.5), --"skill_effect_duration_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = mod("PhysicalDamageGainAsChaos", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }), --"physical_damage_%_to_add_as_chaos"
 		[4] = mod("ElementalResist", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }), --"base_resist_all_elements_%"
 	},
@@ -4749,20 +4749,20 @@ skills["StormCall"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
-		skill("damageEffectiveness", 0.8), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.5),
+		skill("damageEffectiveness", 0.8),
+		skill("CritChance", 6),
 		skill("duration", 1.5), --"base_skill_effect_duration" = 1500
 		--"is_area_damage" = ?
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
-		skill("radius", 20), 
+		skill("radius", 20),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[4] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 		[5] = skill("radiusExtra", nil), --"active_skill_base_radius_+"
@@ -4826,9 +4826,9 @@ skills["VaalStormCall"] = {
 		vaal = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
-		skill("damageEffectiveness", 0.8), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.5),
+		skill("damageEffectiveness", 0.8),
+		skill("CritChance", 6),
 		skill("duration", 3), --"base_skill_effect_duration" = 3000
 		--"is_area_damage" = ?
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
@@ -4837,7 +4837,7 @@ skills["VaalStormCall"] = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[3] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 	},
@@ -4902,20 +4902,20 @@ skills["SummonChaosGolem"] = {
 		chaos = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
-		skill("cooldown", 6), 
+		skill("castTime", 1),
+		skill("cooldown", 6),
 		mod("ActiveGolemLimit", "BASE", 1), --"base_number_of_golems_allowed" = 1
 		--"display_minion_monster_type" = 5
-		skill("allowTotemBuff", true), 
-		flag("Condition:HaveChaosGolem", { type = "GlobalEffect", effectType = "Buff" }), 
+		skill("allowTotemBuff", true),
+		flag("Condition:HaveChaosGolem", { type = "GlobalEffect", effectType = "Buff" }),
 	},
 	qualityMods = {
 		mod("MinionModifier", "LIST", { mod = mod("Life", "INC", 1) }), --"minion_maximum_life_+%" = 1
 		mod("MinionModifier", "LIST", { mod = mod("Damage", "INC", 1) }), --"minion_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		--[3] = "base_actor_scale_+%"
 		[4] = mod("PhysicalDamageReduction", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }), --"chaos_golem_grants_additional_physical_damage_reduction_%"
 		[5] = mod("MinionModifier", "LIST", { mod = mod("Life", "INC", nil) }), --"minion_maximum_life_+%"
@@ -4982,20 +4982,20 @@ skills["SummonLightningGolem"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 1), 
-		skill("cooldown", 6), 
+		skill("castTime", 1),
+		skill("cooldown", 6),
 		mod("ActiveGolemLimit", "BASE", 1), --"base_number_of_golems_allowed" = 1
 		--"display_minion_monster_type" = 11
-		skill("allowTotemBuff", true), 
-		flag("Condition:HaveLightningGolem", { type = "GlobalEffect", effectType = "Buff" }), 
+		skill("allowTotemBuff", true),
+		flag("Condition:HaveLightningGolem", { type = "GlobalEffect", effectType = "Buff" }),
 	},
 	qualityMods = {
 		mod("MinionModifier", "LIST", { mod = mod("Life", "INC", 1) }), --"minion_maximum_life_+%" = 1
 		mod("MinionModifier", "LIST", { mod = mod("Damage", "INC", 1) }), --"minion_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		--[3] = "base_actor_scale_+%"
 		[4] = mod("Speed", "INC", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }), --"lightning_golem_grants_attack_and_cast_speed_+%"
 		[5] = mod("MinionModifier", "LIST", { mod = mod("Life", "INC", nil) }), --"minion_maximum_life_+%"
@@ -5062,7 +5062,7 @@ skills["SummonRagingSpirit"] = {
 		fire = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
+		skill("castTime", 0.5),
 		skill("duration", 5), --"base_skill_effect_duration" = 5000
 		mod("ActiveRagingSpiritLimit", "BASE", 20), --"base_number_of_raging_spirits_allowed" = 20
 		skill("minionDamageEffectiveness", -30), --"active_skill_minion_added_damage_+%_final" = -30
@@ -5071,8 +5071,8 @@ skills["SummonRagingSpirit"] = {
 		mod("MinionModifier", "LIST", { mod = mod("MovementSpeed", "INC", 1) }), --"minion_movement_speed_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 	},
 	levels = {
 		[1] = { 4, 4, },
@@ -5134,7 +5134,7 @@ skills["SummonSkeletons"] = {
 		duration = true,
 	},
 	baseMods = {
-		skill("castTime", 0.8), 
+		skill("castTime", 0.8),
 		--"number_of_melee_skeletons_to_summon" = 2
 		skill("duration", 20), --"base_skill_effect_duration" = 20000
 		skill("minionDamageEffectiveness", -50), --"active_skill_minion_added_damage_+%_final" = -50
@@ -5144,8 +5144,8 @@ skills["SummonSkeletons"] = {
 		mod("MinionModifier", "LIST", { mod = mod("Damage", "INC", 1) }), --"damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = mod("ActiveSkeletonLimit", "BASE", nil), --"base_number_of_skeletons_allowed"
 		[4] = skill("minionLevel", nil), --"display_minion_monster_level"
 	},
@@ -5211,7 +5211,7 @@ skills["VaalSummonSkeletons"] = {
 		duration = true,
 	},
 	baseMods = {
-		skill("castTime", 0.8), 
+		skill("castTime", 0.8),
 		--"number_of_leader_skeletons_to_summon" = 1
 		skill("duration", 20), --"base_skill_effect_duration" = 20000
 		--"display_minion_monster_type" = 2
@@ -5220,7 +5220,7 @@ skills["VaalSummonSkeletons"] = {
 		mod("MinionModifier", "LIST", { mod = mod("Damage", "INC", 1) }), --"damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		--[2] = "number_of_melee_skeletons_to_summon"
 		--[3] = "number_of_archer_skeletons_to_summon"
 		--[4] = "number_of_mage_skeletons_to_summon"
@@ -5284,9 +5284,9 @@ skills["TempestShield"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
-		skill("damageEffectiveness", 0.6), 
-		skill("CritChance", 6), 
+		skill("castTime", 0.5),
+		skill("damageEffectiveness", 0.6),
+		skill("CritChance", 6),
 		mod("BlockChance", "BASE", 3, 0, 0, { type = "GlobalEffect", effectType = "Buff" }), --"shield_block_%" = 3
 		--"skill_override_pvp_scaling_time_ms" = 700
 		mod("ChainCountMax", "BASE", 1), --"number_of_additional_projectiles_in_chain" = 1
@@ -5298,8 +5298,8 @@ skills["TempestShield"] = {
 		mod("LightningDamage", "INC", 1), --"lightning_damage_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("LightningMin", nil), --"spell_minimum_base_lightning_damage"
 		[4] = skill("LightningMax", nil), --"spell_maximum_base_lightning_damage"
 	},
@@ -5360,8 +5360,8 @@ skills["FrostBoltNova"] = {
 		cold = true,
 	},
 	baseMods = {
-		skill("castTime", 0.9), 
-		skill("CritChance", 5), 
+		skill("castTime", 0.9),
+		skill("CritChance", 5),
 		skill("duration", 3), --"base_skill_effect_duration" = 3000
 		--"is_area_damage" = ?
 		skill("dotIsSpell", true), --"spell_damage_modifiers_apply_to_damage_over_time" = ?
@@ -5370,8 +5370,8 @@ skills["FrostBoltNova"] = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("ColdMin", nil), --"spell_minimum_base_cold_damage"
 		[4] = skill("ColdMax", nil), --"spell_maximum_base_cold_damage"
 		[5] = skill("ColdDot", nil), --"base_cold_damage_to_deal_per_minute"
@@ -5433,18 +5433,18 @@ skills["Vulnerability"] = {
 		duration = true,
 	},
 	baseMods = {
-		skill("castTime", 0.5), 
+		skill("castTime", 0.5),
 		mod("DamageTakenOverTime", "INC", 33, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"degen_effect_+%" = 33
 		--"base_deal_no_damage" = ?
-		skill("debuff", true), 
-		skill("radius", 22), 
+		skill("debuff", true),
+		skill("radius", 22),
 	},
 	qualityMods = {
 		mod("PhysicalDamageTaken", "INC", 0.5, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"physical_damage_taken_+%" = 0.5
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = skill("duration", nil), --"base_skill_effect_duration"
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 		[5] = mod("PhysicalDamageTaken", "INC", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }), --"physical_damage_taken_+%"
@@ -5521,22 +5521,22 @@ skills["Wither"] = {
 		chaos = true,
 	},
 	baseMods = {
-		skill("castTime", 0.28), 
+		skill("castTime", 0.28),
 		mod("ChaosDamageTaken", "INC", 7, 0, 0, { type = "GlobalEffect", effectType = "Debuff" }), --"chaos_damage_taken_+%" = 7
 		nil, --"base_skill_effect_duration" = 500
 		skill("duration", 2), --"base_secondary_skill_effect_duration" = 2000
-		skill("debuff", true), 
-		skill("stackCount", 1, { type = "SkillPart", skillPart = 1 }), 
-		skill("stackCount", 5, { type = "SkillPart", skillPart = 2 }), 
-		skill("stackCount", 10, { type = "SkillPart", skillPart = 3 }), 
-		skill("stackCount", 20, { type = "SkillPart", skillPart = 4 }), 
+		skill("debuff", true),
+		skill("stackCount", 1, { type = "SkillPart", skillPart = 1 }),
+		skill("stackCount", 5, { type = "SkillPart", skillPart = 2 }),
+		skill("stackCount", 10, { type = "SkillPart", skillPart = 3 }),
+		skill("stackCount", 20, { type = "SkillPart", skillPart = 4 }),
 	},
 	qualityMods = {
 		mod("Duration", "INC", 1), --"skill_effect_duration_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
-		[2] = skill("manaCost", nil), 
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("manaCost", nil),
 		[3] = mod("MovementSpeed", "INC", nil, 0, 0, { type = "GlobalEffect", effectType = "Debuff" }), --"base_movement_velocity_+%"
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
 	},
@@ -5597,17 +5597,17 @@ skills["Wrath"] = {
 		lightning = true,
 	},
 	baseMods = {
-		skill("castTime", 1.2), 
-		skill("manaCost", 50), 
-		skill("cooldown", 1.2), 
+		skill("castTime", 1.2),
+		skill("manaCost", 50),
+		skill("cooldown", 1.2),
 		--"base_deal_no_damage" = ?
-		skill("radius", 36), 
+		skill("radius", 36),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 1), --"base_skill_area_of_effect_+%" = 1
 	},
 	levelMods = {
-		[1] = skill("levelRequirement", nil), 
+		[1] = skill("levelRequirement", nil),
 		[2] = mod("LightningMin", "BASE", nil, ModFlag.Attack, 0, { type = "GlobalEffect", effectType = "Aura" }), --"attack_minimum_added_lightning_damage"
 		[3] = mod("LightningMax", "BASE", nil, ModFlag.Attack, 0, { type = "GlobalEffect", effectType = "Aura" }), --"attack_maximum_added_lightning_damage"
 		[4] = mod("AreaOfEffect", "INC", nil), --"base_skill_area_of_effect_+%"
